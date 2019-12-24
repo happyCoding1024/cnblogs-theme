@@ -1,0 +1,107 @@
+<!-- 添加公告栏图片并指向首页链接 -->
+<div align="center">
+
+  <p class="gonggao"><a style="color: #888;" href="http://www.cnblogs.com/shwee/p/9056959.html">努力学习前端中，希望和小伙伴们一起学习，请多多指教。</a></p>
+  <!-- Github 二维码 -->
+  <a class="wenzi" href="https://www.cnblogs.com/zhangguicheng/">Github</a>
+  <a href="https://www.cnblogs.com/zhangguicheng/">
+    <img src="https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191224025216Github%E4%BA%8C%E7%BB%B4%E7%A0%81188_188.png"></a>
+
+  <!-- 知乎二维码 -->
+  <a class="wenzi" href="https://www.zhihu.com/people/happyitboy/activities">知乎</a>
+  <a href="https://www.zhihu.com/people/happyitboy/activities">
+    <img src="https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191224024917%E7%9F%A5%E4%B9%8E%E4%BA%8C%E7%BB%B4%E7%A0%81188_188.png"></a>
+</div>
+
+<span>----------------------------</span>
+
+<!-- 添加公告栏时钟 -->
+<div id="clockdiv">
+  <canvas id="dom" width="120" height="120">时钟canvas</canvas>
+</div>
+<script type="text/javascript" src="https://files.cnblogs.com/files/shwee/clock.js"></script>
+
+<!-- 为页面添加爱心特效 -->
+<script type="text/javascript">
+
+  (function(window,document,undefined){
+    var hearts = [];
+
+    window.requestAnimationFrame = (function(){
+      return window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function (callback){
+          setTimeout(callback,1000/60);
+        }
+    })();
+
+    init();
+
+    function init(){
+      css(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: absolute;}.heart:after{top: -5px;}.heart:before{left: -5px;}");
+      attachEvent();
+      gameloop();
+    }
+
+    function gameloop(){
+      for(var i=0;i<hearts.length;i++){
+        if(hearts[i].alpha <=0){
+          document.body.removeChild(hearts[i].el);
+          hearts.splice(i,1);
+          continue;
+        }
+
+        hearts[i].y--;
+        hearts[i].scale += 0.004;
+        hearts[i].alpha -= 0.013;
+        hearts[i].el.style.cssText = "left:"+hearts[i].x+"px;top:"+hearts[i].y+"px;opacity:"+hearts[i].alpha+";transform:scale("+hearts[i].scale+","+hearts[i].scale+") rotate(45deg);background:"+hearts[i].color;
+      }
+
+      requestAnimationFrame(gameloop);
+    }
+
+    function attachEvent(){
+      var old = typeof window.onclick==="function" && window.onclick;
+      window.onclick = function(event){
+        old && old();
+        createHeart(event);
+      }
+    }
+
+    function createHeart(event){
+      var d = document.createElement("div");
+      d.className = "heart";
+      hearts.push({
+        el : d,
+        x : event.clientX - 5,
+        y : event.clientY - 5,
+        scale : 1,
+        alpha : 1,
+        color : randomColor()
+      });
+
+      document.body.appendChild(d);
+    }
+
+    function css(css){
+      var style = document.createElement("style");
+      style.type="text/css";
+      try{
+        style.appendChild(document.createTextNode(css));
+      }
+      catch(ex){
+        style.styleSheet.cssText = css;
+      }
+
+      document.getElementsByTagName('head')[0].appendChild(style);
+    }
+
+    function randomColor(){
+      return "rgb("+(~~(Math.random()*255))+","+(~~(Math.random()*255))+","+(~~(Math.random()*255))+")";
+    }
+
+  })(window,document);
+</script>
