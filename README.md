@@ -1,7 +1,9 @@
 # cnblogs_theme
-现在的主题的原型是参考的[博客园美化教程大集合----极致个性化你的专属博客](https://www.cnblogs.com/shwee/p/9060226.html)这篇文章。
-
-目前只进行了一些小的修改，有时间会换一个主题再次修改。
 
 现在想更换自己的主题可以将对应的代码拷贝到博客园的设置的对应位置，使用的博客园主题是 `AnotherEon001`.
 
+主页效果图如下：
+
+![博客园主页](https://raw.githubusercontent.com/happyCoding1024/image-hosting/master/img/博客园主页.png)
+
+有时间会再写一个比较详细的教程。
