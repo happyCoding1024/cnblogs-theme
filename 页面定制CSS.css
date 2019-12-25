@@ -1,10 +1,3 @@
-/* 隐藏园龄等信息*/
-#profile_block {
-    margin-left: 10px;
-    display: none;
-    color: red;
-}
-
 #header{display:none;} /* 将默认的导航头屏蔽掉，这样才能把自己的导航栏加上去 */
 
 /* 定制自己导航栏的样式 */
@@ -78,10 +71,10 @@
     float:left;
     width:25px;
     box-shadow: 0 0 8px #877788;
-    border:1px solid #00DDC00;
+    border:1px solid #ccc;
     border-right:none;
     text-align:center;
-    background:#999;
+    background:#f5efe2;
 }
 #sideBarContents{
     float:left;
@@ -121,7 +114,7 @@
     box-shadow: 0 0 2px #ccc;
     border:1px solid #ccc;
     padding:4px;
-    background-color:#fff;
+    background-color: rgb(244, 237, 227);
     border-radius:4px 4px 4px 4px !important;
 }
 
@@ -134,18 +127,6 @@
     text-decoration: none;
     color: #5B9DCA;
     padding: 3px;
-}
-
-/* 定制返回顶部按键 */
-#toTop {
-    background: url(//http://images.cnblogs.com/cnblogs_com/shwee/1218109/o_toTop.bmp) no-repeat 0px top;
-    width: 57px;
-    height: 57px;
-    overflow: hidden;
-    position: fixed;
-    right: 180px;
-    bottom: 20px;
-    cursor: pointer;
 }
 
 /* 定制公告栏文字信息 */
@@ -235,16 +216,119 @@ body {
     font-family: 'Microsoft Yahei';
 }
 
+/* 定制公告栏音乐插件的样式 */
+.aplayer {
+  font-family: Arial,Helvetica,sans-serif;  /*音乐插件字体*/
+  margin: 0px;  /*音乐插件与公告栏左边的边距，0px就是直接抵到公告栏左边的边上*/
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  border-radius: 2px;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: normal;
+}
+
+/*播放器主背景颜色*/
+.aplayer .aplayer-list ol {
+  background-color: rgb(244, 237, 227);
+}
+
+.aplayer .aplayer-info {
+  background-color: rgb(244, 237, 227);
+}
+.aplayer {
+  box-shadow: 0 2px 7px 0 rgba(0,0,0,.07), 0 3px 7px 0 rgba(0,0,0,.1);
+}
+
+
+
+/*改变日历样式*/
+.CalTitle {
+  background-color: rgb(244, 237, 227);
+}
+
+.Cal {
+  background-color: rgb(244, 237, 227);
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px #ccc;
+}
+
 
 /*  下面都是自己加的样式 */
 /* 修改 阅读原文 颜色*/
 .postbody a {
-    color: skyblue;
+    color: #ab9a70;
 }
 /* 修改 博文题目 颜色*/
 a {
-    color: skyblue;
-    text-decoration: none;
+  color: #ab9a70;
+  text-decoration: none;
 }
 
+/*修改经过博文题目时的颜色*/
+a:hover {
+  color: #ab9a10;
+  text-decoration: none;
+}
 
+/* 隐藏园龄等信息*/
+#profile_block {
+    margin-left: 10px;
+    display: none;
+    color: red;
+}
+
+/*定义博客签名的背景色*/
+#MySignature {
+    background-color: #ebf1ea;
+}
+
+/*改变内容区的背景颜色*/
+#content {
+  background-color: rgb(244, 237, 227);
+}
+
+/*改变右边侧边栏背景颜色*/
+#leftmenu {
+  background-color: rgb(244, 237, 227);
+}
+
+/*改变日期的背景色*/
+#content p.date a {
+  color: #999;
+  background-color: #f3e6e6;
+}
+
+/*改变日期的大小*/
+#content p.date {
+  font-size: 0.2em;
+}
+
+/*改变右侧 hover 背景颜色值*/
+#leftmenu a:hover {
+  background-color: rgb(230, 213, 189);
+}
+
+/*改变最新随笔列表间距*/
+#leftmenu li {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/*隐藏页面底部的个人信息*/
+#author_profile {
+  display: none;
+}
+
+/*改变 input 输入框背景色*/
+.input_my_zzk {
+  background-color: #f5e7c7;
+}
+
+/*改变文本评论框的颜色*/
+#tbCommentBody {
+  background-color: rgb(251, 246, 235);
+}

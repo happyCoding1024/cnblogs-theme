@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="player"  class="aplayer"></div>
+<link href="https://files.cnblogs.com/files/shwee/APlayer.min_v1.10.1.css" rel="stylesheet">
+<script src="https://files.cnblogs.com/files/shwee/APlayer.min_v1.10.1.js"></script>
+
+<script type="text/javascript">
+  var ap = new APlayer({
+    element: document.getElementById('player'),
+    narrow: false,
+    autoplay: false,          <!-- 是否自动播放 -->
+    showlrc: false,
+    theme: 'rgb(244, 237, 227)',      <!-- 插件背景颜色，建议和你的公告栏背景色一样，这样融为一体的感觉 -->
+    music: [{
+      title: '小酒窝',
+      author: 'JJ',
+      url: 'http://m10.music.126.net/20191225121809/a61dfaeef61968997ee787a91e54719c/ymusic/5e89/28c7/3033/3eab093f75388e13ce89714bed25d281.mp3',
+      pic: 'https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191224141901%E6%9E%97%E4%BF%8A%E6%9D%B066_66.jpg'
+      },{
+      title: '卡农(钢琴版)',
+      author: 'dylanf',
+      url: 'http://m10.music.126.net/20191225120647/43a644d49ca89b5b30d40fd5e8ac1fa0/ymusic/0553/525d/055b/29afaa2d8de70e6ae06821982874f0b3.mp3',
+      pic: 'https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191225035120%E5%8D%A1%E5%86%9C(%E9%92%A2%E7%90%B4%E7%89%88)66_66.jpg'
+    },{
+      title: '你曾是少年',
+      author: 'SHE',
+      url: 'http://m10.music.126.net/20191225122905/892aa62d77c6ea06b000959814036cc9/ymusic/7649/385a/3e35/4a4539ebfbb7b9f8d95ab9fb111471ed.mp3',
+      pic: 'https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191225040246SHE66_66.jpg'
+    },{
+      title: '野狼Disco',
+      author: '宝石Gem',
+      url: 'http://m10.music.126.net/20191225123021/1cbdf17bf3cc4f7155801703856eda32/ymusic/0608/5559/535c/1b8e6801d1b32d4cc573d60186dc9ba4.mp3',
+      pic: 'https://images.cnblogs.com/cnblogs_com/zhangguicheng/1618684/o_191225040254%E9%87%8E%E7%8B%BCdesco66_66.jpg'
+    }]
+  });
+</script>
+
+</body>
+</html>
